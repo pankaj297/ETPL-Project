@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+const renderurl = "https://etplnode.onrender.com";
+
 
 const RegistrationForm = () => {
 
@@ -21,7 +23,7 @@ const RegistrationForm = () => {
       try {
         if (email && password) {
           console.log(email, password);
-          await axios.post("http://127.0.0.1:7000/api/v1/users/createUser", {
+          await axios.post(`${renderurl}/api/v1/users/createUser`, {
             name,
             dateOfBirth,
             email,
