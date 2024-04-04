@@ -2,9 +2,6 @@ import React, {useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const renderurl = "https://etplnode.onrender.com";
-
-
 const LoginForm = () =>{
 
    
@@ -18,7 +15,7 @@ const LoginForm = () =>{
      try {
        if (name && password) {
          console.log(name, password);
-         await axios.post(`${renderurl}/loginUser`, {
+         await axios.post("http://127.0.0.1:7000/api/v1/users/loginUser", {
            name,
            password,
          });
