@@ -23,7 +23,7 @@ const RegistrationForm = () => {
       try {
         if (email && password) {
           console.log(email, password);
-          await axios.post(`${renderurl}/createUser`, {
+          await axios.post(`${renderurl}/api/v1/users/createUser`, {
             name,
             dateOfBirth,
             email,

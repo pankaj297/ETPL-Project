@@ -18,7 +18,7 @@ const LoginForm = () =>{
      try {
        if (name && password) {
          console.log(name, password);
-         await axios.post(`${renderurl}/loginUser`, {
+         await axios.post(`${renderurl}/api/v1/users/loginUser`, {
            name,
            password,
          });
