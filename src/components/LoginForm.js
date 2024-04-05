@@ -15,10 +15,13 @@ const LoginForm = () =>{
      try {
        if (name && password) {
          console.log(name, password);
-         await axios.post("http://127.0.0.1:7000/api/v1/users/loginUser", {
-           name,
-           password,
-         });
+         await axios.post(
+           "https://etplnode.onrender.com/api/v1/users/loginUser",
+           {
+             name,
+             password,
+           }
+         );
          alert("Login Success");
          navigate("/Tableditels");
        }

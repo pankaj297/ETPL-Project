@@ -21,12 +21,15 @@ const RegistrationForm = () => {
       try {
         if (email && password) {
           console.log(email, password);
-          await axios.post("http://127.0.0.1:7000/api/v1/users/createUser", {
-            name,
-            dateOfBirth,
-            email,
-            password,
-          });
+          await axios.post(
+            "https://etplnode.onrender.com/api/v1/users/createUser",
+            {
+              name,
+              dateOfBirth,
+              email,
+              password,
+            }
+          );
           alert("Account Created");
           navigate("/LoginForm");
         }
