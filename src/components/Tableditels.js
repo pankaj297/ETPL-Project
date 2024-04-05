@@ -6,7 +6,7 @@ const Tableditels = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:7000/")
+      .get("https://etplnode.onrender.com/")
       .then((users) => setUsers(users.data))
       .catch((err) => console.log(err));
   });
