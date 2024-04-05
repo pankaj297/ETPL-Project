@@ -60,8 +60,7 @@ const RegistrationForm = () => {
                 name="name"
                 value={dateOfBirth}
                 onChange={(e) => setdateOfBirth(e.target.value)}
-              
-               dateFormat="DD-MM-YYYY" 
+               dateformat="YYYY-MM-DD"
                 placeholder="Date of Birth"
                 required
               />
