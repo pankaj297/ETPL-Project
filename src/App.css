@@ -16,96 +16,198 @@
 
 body{
   background-color: rgb(210, 225, 228);
-  
-}
-.customPadding{
-  display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: blanchedalmond;
-    margin: 10%;
-    padding-top: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 
-.card-img{
-   width: 200px;
+
+/* Container Styling */
+.customPadding {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
+/* Heading Styling */
+h2 {
+  font-size: 24px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Image Styling */
+.card-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
 .authForm {
-  margin: auto;
-  width: 60%;
-  padding-bottom: 2rem;
+  width: 100%;
 }
-@media screen and (max-width: 700px){
-  .authForm {
-      width: 80%;
-    }
-        .customPadding {
-          margin: 3%;
-        }
-}
-form .formInputs {
-  padding: 0.5rem 0;
+
+.formInputs {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.4rem;
+  gap: 15px;
 }
 
-.formInputs input{
-  padding: 0.6rem 0.6rem;
-  outline: none;
-  border: none;
-  border: 1px solid black;
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
   width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease-in-out;
 }
 
-
-
-
-.authForm form button {
-  position: relative;
-  float: right;
-  padding: 0.6rem 1rem;
-  width: 100%;
+input:focus {
   outline: none;
-  border: none;
-  border: 1px solid orange;
-  color: orange;
-  font-weight: 800;
-  background: transparent;
-  transition: 0.5s;
-  cursor: pointer;
-  margin-bottom: 1rem;
+  border-color: #007bff;
 }
 
-.authForm form button:hover {
-  background-color: orange;
+/* Button Styling */
+button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
   color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Link Button Styling */
+.log-btn {
+  display: block;
+  margin-top: 15px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.3s ease-in-out;
+}
+
+.log-btn:hover {
+  color: #0056b3;
+}
+
+/* Error Message Styling */
+.alert {
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .customPadding {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* table css */
+.App {
+  max-width: 1200px;
+  margin-top: 2rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 20px;
 }
 
-th,
-td {
-  padding: 10px;
-  border: 1px solid #ccc;
+/* Table Header Styling */
+.tablehead {
+  background-color: skyblue;
+  color: #333;
+  text-align: left;
 }
 
 th {
-  text-align: left;
-  background-color: #f2f2f2;
+  padding: 12px 15px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Table Row Styling */
+tr {
+  border-bottom: 1px solid #e0e0e0;
 }
 
 tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-.tablehead{
-   font-size: 25px;
-   font-weight: 700;
+tr:hover {
+  background-color: rgb(186, 200, 213);
+}
+
+/* Table Data Styling */
+td {
+  padding: 12px 15px;
+  font-size: 14px;
+}
+
+/* Index Column Styling */
+td:first-child {
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  th,
+  td {
+    word-break: break-word;
+  }
 }

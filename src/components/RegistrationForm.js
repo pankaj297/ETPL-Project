@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
+import { Link } from "react-router-dom";
 
 const RegistrationForm = () => {
 
@@ -60,7 +60,7 @@ const RegistrationForm = () => {
                 name="name"
                 value={dateOfBirth}
                 onChange={(e) => setdateOfBirth(e.target.value)}
-               dateformat="YYYY-MM-DD"
+                dateformat="YYYY-MM-DD"
                 placeholder="Date of Birth"
                 required
               />
@@ -85,6 +85,9 @@ const RegistrationForm = () => {
             </div>
             <button type="submit">Register</button>
           </form>
+          <Link to="/LoginForm" className="log-btn">
+            Log In
+          </Link>
         </div>
       </div>
     </>
